@@ -28,6 +28,8 @@
     }
     img {
         width: 100%;
+        height: 300px;
+
     }
     .show{
         display: block;
