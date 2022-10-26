@@ -1,5 +1,5 @@
 export const images = [
-    { 
+    {
         id: 0,
         name: "Imagen 1",
         imgurl: "https://wallpapercave.com/wp/fDIESuJ.jpg",
@@ -28,5 +28,5 @@ export const images = [
         name: "Imagen 5",
         imgurl: "https://wallpapercave.com/uwp/uwp2858023.gif",
         attribution: "Atributo de la imagen5",
-    }
+    },
 ];
