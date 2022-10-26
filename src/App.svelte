@@ -1,23 +1,28 @@
 <script>
-    import { images } from "./imageData.js";
-    let slideNo;
-    let totalSlide;
-    let varx;
-        
-    let  imageurl = "https://wallpapercave.com/wp/fDIESuJ.jpg";
-
+  import { images } from "./imageData.js";
+  import Slide from "./components/Slideshow.svelte";
+  import Caption from "./components/Caption.svelte";
+  //   let slideNo;
+  //   let totalSlide;
+  //   let varx;
+  let imageShowIndex = 0;
 </script>
 
-<div class="container">
-    <!-- Full-width images with number text -->
-    <div class="mySlides">
-        <div class="numbertext">{slideNo} / {totalSlide}</div>
-        <img src={images as imgurl} alt={varx} style="width:100%" />}
-    </div>
-</div>
+<div class="container" />
+{#each images as { id, name, imgurl }}
+  <Slide
+    image={imgurl}
+    altTag={name}
+    imageShowing={id === imageShowIndex}
+    slideNo={id + 1}
+    totalSlide={images.length}
+  />
+{/each}
+
+<Caption 
+    caption ={images[imageShowIndex].name}
+
+/>
 
 <style>
-    .mySlides {
-        /* display: none; */
-    }
 </style>
